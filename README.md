@@ -16,7 +16,6 @@ The following will be outputted to your terminal: <br />
 **Total Equity:** <br />
 **Highest performing stocks** (performs above the average): <br />
 **Lowest performers** (less than average return): <br />
-**Distribution Average** (Diversification target): <br />
 **Stocks to Purchase:** (If lower than distribution average and is a high performer) <br />
 
 **Goals for the Project**
