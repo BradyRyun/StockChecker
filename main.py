@@ -49,8 +49,6 @@ print("Highest performers: ")
 print(highPerformers)
 print("Lowest performers: ")
 print(lowPerformers)
-print("Distribution average: ")
-print(str(round(distributionAverage, 2)))
 if len(highPerformersAndUnderDistributionStocks) != 0:
     print(highPerformersAndUnderDistributionStocks)
 else:
