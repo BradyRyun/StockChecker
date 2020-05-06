@@ -1,8 +1,9 @@
 # StockChecker
 
 This is a simple stock checking application that will output to the command line information regarding your Robinhood account.
-To get started, you will need python install on your machine.
-Run 
+To get started, you will need python install on your machine. <br />
+
+Run the following commands: <br /> 
 ```
 pip install robin_stocks
 pip install numpy
