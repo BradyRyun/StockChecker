@@ -20,8 +20,8 @@ The following will be outputted to your terminal: <br />
 **Stocks to Purchase:** (If lower than distribution average and is a high performer) <br />
 
 **Goals for the Project**
--Send email notifications
--Create GUI
--Host on a Heroku web server and run task at the beginning of the trading day and at the end.
--Write information to CSV file
+- Send email notifications
+- Create GUI
+- Host on a Heroku web server and run task at the beginning of the trading day and at the end.
+- Write information to CSV file
 
