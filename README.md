@@ -1,6 +1,6 @@
-# StockChecker
+# Robinhood Stock Checker
 
-This is a simple stock checking application that will output to the command line information regarding your Robinhood account.
+This is a simple stock checking application that will output to the command line information regarding your Robinhood account. 
 To get started, you will need python install on your machine. <br />
 
 Run the following commands: <br /> 
@@ -18,3 +18,10 @@ The following will be outputted to your terminal: <br />
 **Lowest performers** (less than average return): <br />
 **Distribution Average** (Diversification target): <br />
 **Stocks to Purchase:** (If lower than distribution average and is a high performer) <br />
+
+**Goals for the Project**
+-Send email notifications
+-Create GUI
+-Host on a Heroku web server and run task at the beginning of the trading day and at the end.
+-Write information to CSV file
+
