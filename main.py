@@ -1,24 +1,13 @@
 import robin_stocks
 import numpy as np
+from purchase import Purchase
 
 username = input("Please enter your username: ")
 password = input("Please enter your password: ")
 purchasing = input("Are we purchasing stock today? Y/N: ")
 
 
-def purchaseQuestion(p):
-    purchaseStock = False
-    if p.lower() == "y":
-        purchaseStock = True
-    elif p.lower() == "n":
-        purchaseStock = False
-    else:
-        p = input("Please enter a valid response (Y/N): ")
-        purchaseQuestion(p)
-    return purchaseStock
-
-
-buyStock = purchaseQuestion(purchasing)
+buyStock = Purchase.purchaseQuestion(purchasing)
 
 robin_stocks.login(username, password)
 
