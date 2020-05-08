@@ -1,6 +1,6 @@
 import robin_stocks
 import numpy as np
-from purchase import Purchase
+from func.purchase import Purchase
 
 username = input("Please enter your username: ")
 password = input("Please enter your password: ")
@@ -8,6 +8,13 @@ purchasing = input("Are we purchasing stock today? Y/N: ")
 
 
 buyStock = Purchase.purchaseQuestion(purchasing)
+
+if(buyStock == True):
+    print("We are buying stock today!")
+else:
+    print("No stocks will be bought today.")
+
+input("Press any button to continue")
 
 robin_stocks.login(username, password)
 

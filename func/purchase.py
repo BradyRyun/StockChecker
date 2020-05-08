@@ -1,7 +1,4 @@
 class Purchase:
-    def __init__(self):
-        print("Purchase object started")
-
     def purchaseQuestion(p):
         purchaseStock = False
         if p.lower() == "y":
