@@ -4,8 +4,14 @@ import numpy as np
 
 username = input("Please enter your username: ")
 password = input("Please enter your password: ")
+purchasing = input("Are we purchasing stock today? Y/N: ")
+if purchasing.lower() == "y":
+    purchaseStock = True
+elif purchasing.lower() != "n":
+    purchaseStock = False
+else:
+    purchaseStock = False
 robin_stocks.login(username, password)
-
 # Build portfolio for program to use
 mystocks = robin_stocks.build_holdings()
 
