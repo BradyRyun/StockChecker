@@ -15,7 +15,11 @@ equity = 0
 equityChange = 0
 highPerformers = []
 lowPerformers = []
-stocksToPurchase = []
+nestedHigh = []
+nestedLow = []
+nestedDist = []
+distroList = []
+stocksUnderDistribution = []
 highPerformersAndUnderDistributionStocks = []
 arr = []
 distributionAverage = 100 / items
@@ -35,13 +39,24 @@ equityAverageChange = float(equityChange) / float(items)
 for key, value in mystocks.items():
     arr = np.array(list(value.values())).flatten()
     if float(arr[4]) > float(equityAverageChange):
-        highPerformers.append(key)
+        nestedHigh.append(key)
+        nestedHigh.append(float(arr[4]))
     else:
-        lowPerformers.append(key)
+        nestedLow.append(key)
+        nestedLow.append(float(arr[4]))
     if float(arr[10]) < float(distributionAverage):
-        stocksToPurchase.append(key)
-for i in stocksToPurchase:
-    highPerformersAndUnderDistributionStocks = [value for value in stocksToPurchase if value in highPerformers]
+        nestedDist.append(key)
+        nestedDist.append(float(arr[10]))
+        distroList.append(key)
+
+# Checks if a stock is under the average distribution and is a high performing stock.
+for i in distroList:
+    highPerformersAndUnderDistributionStocks = [value for value in distroList if value in highPerformers]
+
+# Adding lists inside of lists
+highPerformers.append(nestedHigh)
+lowPerformers.append(nestedLow)
+stocksUnderDistribution.append(nestedDist)
 
 print("Total equity: ")
 print("$" + str(round(equity, 2)))
@@ -49,12 +64,12 @@ print("Highest performers: ")
 print(highPerformers)
 print("Lowest performers: ")
 print(lowPerformers)
-if len(highPerformersAndUnderDistributionStocks) != 0:
+if len(highPerformersAndUnderDistributionStocks) > 0:
     print(highPerformersAndUnderDistributionStocks)
 else:
     print("There were no high performing stocks under the current distribution")
     print("Stocks under distribution percentage average: ")
-    print(stocksToPurchase)
+    print(stocksUnderDistribution)
 
 
 
