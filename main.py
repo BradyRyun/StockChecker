@@ -6,7 +6,7 @@ password = input("Please enter your password: ")
 purchasing = input("Are we purchasing stock today? Y/N: ")
 
 
-def purchaseLogic(p):
+def purchaseQuestion(p):
     purchaseStock = False
     if p.lower() == "y":
         purchaseStock = True
