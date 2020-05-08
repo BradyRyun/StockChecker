@@ -24,3 +24,4 @@ The following will be outputted to your terminal: <br />
 - Host on a Heroku web server and run task at the beginning of the trading day and at the end.
 - Write stock information to CSV file
 - Add ability to purchase stocks
+- Add 2FA
