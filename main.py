@@ -14,11 +14,11 @@ def purchaseQuestion(p):
         purchaseStock = False
     else:
         p = input("Please enter a valid response (Y/N): ")
-        purchaseLogic(p)
+        purchaseQuestion(p)
     return purchaseStock
 
 
-buyStock = purchaseLogic(purchasing)
+buyStock = purchaseQuestion(purchasing)
 
 robin_stocks.login(username, password)
 
