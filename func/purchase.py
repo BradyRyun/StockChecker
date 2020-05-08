@@ -7,5 +7,5 @@ class Purchase:
             purchaseStock = False
         else:
             p = input("Please enter a valid response (Y/N): ")
-            Purchase.purchaseQuestion(p)
+            purchaseStock = Purchase.purchaseQuestion(p)
         return purchaseStock
