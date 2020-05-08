@@ -40,13 +40,13 @@ for key, value in mystocks.items():
     arr = np.array(list(value.values())).flatten()
     if float(arr[4]) > float(equityAverageChange):
         nestedHigh.append(key)
-        nestedHigh.append(float(arr[4]))
+        nestedHigh.append(str(round(float((arr[4])), 2)) + "%")
     else:
         nestedLow.append(key)
-        nestedLow.append(float(arr[4]))
+        nestedLow.append(str(round(float((arr[4])), 2)) + "%")
     if float(arr[10]) < float(distributionAverage):
         nestedDist.append(key)
-        nestedDist.append(float(arr[10]))
+        nestedDist.append(str(round(float((arr[10])), 2)) + "%")
         distroList.append(key)
 
 # Checks if a stock is under the average distribution and is a high performing stock.
