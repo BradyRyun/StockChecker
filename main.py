@@ -1,17 +1,24 @@
 import robin_stocks
 import numpy as np
 
-
 username = input("Please enter your username: ")
 password = input("Please enter your password: ")
 purchasing = input("Are we purchasing stock today? Y/N: ")
 
-if purchasing.lower() == "y":
-    purchaseStock = True
-elif purchasing.lower() != "n":
+
+def purchaseLogic(p):
     purchaseStock = False
-else:
-    purchaseStock = False
+    if p.lower() == "y":
+        purchaseStock = True
+    elif p.lower() == "n":
+        purchaseStock = False
+    else:
+        p = input("Please enter a valid response (Y/N): ")
+        purchaseLogic(p)
+    return purchaseStock
+
+
+buyStock = purchaseLogic(purchasing)
 
 robin_stocks.login(username, password)
 
@@ -79,6 +86,6 @@ else:
     print("Stocks under distribution percentage average: ")
     print(stocksUnderDistribution)
 
-
-
-
+# TODO Add in purchasing power variable
+# Essentially, I want this to buy stocks where the Distribution is below the average (essentially the stocks in stocksUnderDistribution)
+# Iterate through stocksUnderDistribution and buy 1 stock of the least distributed stock and move up one and do this until purchasing power cannot purchase more.
