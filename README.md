@@ -25,3 +25,6 @@ The following will be outputted to your terminal: <br />
 - Write stock information to CSV file
 - Add ability to purchase stocks
 - Add 2FA
+<br />
+Currently using master as main branch. Once converted to web app, will move to develop as main and master as release. 
+
