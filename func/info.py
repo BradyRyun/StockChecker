@@ -3,7 +3,9 @@ import robin_stocks
 
 
 class Info:
-    def __init__(self):
+    def __init__(self, username, password):
+        # Logging into robinhood
+        robin_stocks.login(username, password)
         # Instantiating variables
         self.mystocks = robin_stocks.build_holdings()
         self.items = len(list(self.mystocks.items()))
@@ -22,9 +24,9 @@ class Info:
         for key, value in self.mystocks.items():
             arr = np.array(list(value.values())).flatten()
             # Summing equity total
-            equity = float(arr[3]) + float(self.equity)
+            self.equity = float(arr[3]) + float(self.equity)
             # Summing equityChange
-            equityChange = float(arr[4]) + float(self.equityChange)
+            self.equityChange = float(arr[4]) + float(self.equityChange)
 
         # Calculating average change to compare each stock's performance to
         equityAverageChange = float(self.equityChange) / float(self.items)
@@ -45,7 +47,7 @@ class Info:
 
         # Checks if a stock is under the average distribution and is a high performing stock.
         for i in self.distroList:
-            highPerformersAndUnderDistributionStocks = [value for value in self.distroList if
+            self.highPerformersAndUnderDistributionStocks = [value for value in self.distroList if
                                                         value in self.highPerformers]
 
         # Adding lists inside of lists
