@@ -5,13 +5,16 @@ import numpy as np
 username = input("Please enter your username: ")
 password = input("Please enter your password: ")
 purchasing = input("Are we purchasing stock today? Y/N: ")
+
 if purchasing.lower() == "y":
     purchaseStock = True
 elif purchasing.lower() != "n":
     purchaseStock = False
 else:
     purchaseStock = False
+
 robin_stocks.login(username, password)
+
 # Build portfolio for program to use
 mystocks = robin_stocks.build_holdings()
 
@@ -39,7 +42,6 @@ for key, value in mystocks.items():
 
 # Calculating average change to compare each stock's performance to
 equityAverageChange = float(equityChange) / float(items)
-
 
 # Testing each stock against averages
 for key, value in mystocks.items():
