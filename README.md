@@ -20,7 +20,7 @@ The following will be outputted to your terminal: <br />
 
 **Goals for the Project**
 - Send email notifications
-- Create GUI
+- Create GUI or convert to Django Web App
 - Host on a Heroku web server and run task at the beginning of the trading day and at the end.
-- Write information to CSV file
-
+- Write stock information to CSV file
+- Add ability to purchase stocks
